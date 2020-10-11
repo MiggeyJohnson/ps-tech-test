@@ -4,7 +4,7 @@
   "description": "pokerstart tech test",
   "main": "index.js",
   "scripts": {
-    "runScenarios1and2": "npx cypress run ./pokerStarsTechTest/scenario1and2tests.spec.js --browser chrome --reporter junit --reporter-options 'mochaFile=results/scenario1and2-test-output.xml,toConsole=true'"
+    "test": "npx cypress run ./pokerStarsTechTest/scenario1and2tests.spec.js --browser chrome --reporter junit --reporter-options 'mochaFile=results/scenario1and2-test-output.xml'"
   },
   "author": "Miggey Johnson",
   "license": "ISC",
