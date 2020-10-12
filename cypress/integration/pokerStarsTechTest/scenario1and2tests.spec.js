@@ -22,7 +22,7 @@ context('Given I go to the PokerStars Home Page', () => {
             cy.url().should('include', '/#/darts/competitions')
             cy.wait('@getComp').its('status').should('eq', 200)
 
-            cy.get('.innerList.basicList').children().eq(1).click()
+            cy.get('.innerList.basicList').children().contains('Premier League').click()
             cy.get('.titleBreadcrumbs__text.titleBreadcrumb__pageTitle').should('be.visible')
             cy.get('.titleBreadcrumbs').contains('Premier League')
 
@@ -47,8 +47,8 @@ context('Given I go to the PokerStars Home Page', () => {
                 cy.get('.betslipToggle').click()
                 cy.get('.horizontalMenu__link__counter').contains('(1)')
 
-                cy.get('.selection__name').invoke('text').should((text2) => {
-                    expect(text2).to.equalIgnoreSpaces(matchText)
+                cy.get('.selection__name').invoke('text').should((betText) => {
+                    expect(betText).to.equalIgnoreSpaces(matchText)
                 })
             })
 

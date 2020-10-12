@@ -19,3 +19,6 @@ Both scenarios are in the file `cypress/integration/pokerStarsTechTest/scenario1
 ## Commands
 Custom cypress commands are under cypress/support/commands.js
 
+## Notes
+These test scenarios were written using live data, as days go on the data may not exist. I have tried to mitigate this by changing leagues and using sports with a busy calendar, so you will see that the first test will look for Darts premier league for example.
+
